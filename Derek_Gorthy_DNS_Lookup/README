@@ -1,0 +1,38 @@
+CS3753 (Operating Systems)
+Spring 2016
+University of Colorado Boulder
+Programming Assignment 3
+
+Author: Derek Gorthy
+Email: derek.gorthy@colorado.edu
+
+---Description---
+
+This program is designed to take an unknown number of input files
+containing only domain names and use DNS lookup on each. The result 
+is then printed in an output file in the format:
+	
+	domainname.com,some.standard.ip
+
+The queue is entirely threadsafe and currently supports a dynamic amount 
+of threads to perform DNS lookup. The number of resolver threads
+is determined from detecting the number of cores on your computer.
+
+Note the use of semaphores and threads in multi-lookup.c. While the concept
+of the program is fairly simple, it does lay out the groundwork of a larger
+project and it demonstrates the proper use of threadsafe mechanisms. 
+
+---Usage---
+
+Build:
+ make
+
+Clean:
+ make clean
+
+Run:
+ ./multi-lookup <path/to/input1> <path/to/input2> <path/to/output>
+ ***NOTE: Program can support as many input files as you wish to provide***
+
+Check solution for memory leaks:
+ valgrind ./multi-lookup <path/to/input> <path/to/output>
