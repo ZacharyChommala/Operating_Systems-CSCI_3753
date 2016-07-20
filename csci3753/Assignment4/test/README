@@ -1,0 +1,28 @@
+Author: Derek Gorthy
+CS3753 (Operating Systems)
+Spring 2016
+University of Colorado Boulder
+Programming Assignment 4
+Public Code
+
+---Files---
+Makefile - GNU makefile to build all relevant code
+pager-lru.c - LRU paging strategy implementation
+pager-predict.c - Predictive paging strategy implementation (you code this).
+
+---Executables---
+test-lru - Runs the LRU implementation
+test-predict - Runs the prediction implementation
+
+---Examples---
+Build:
+ make
+
+Clean:
+ make clean
+
+Run pager-lru test:
+ ./test-lru
+
+Run pager-predict:
+ ./test-predict
